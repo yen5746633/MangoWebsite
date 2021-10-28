@@ -1,24 +1,45 @@
 {
   "name": "mango_website",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
+  "repository": "https://github.com/yen5746633/MangoWebsite.git",
+  "author": "yuna <yen5746633@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "3": "^2.1.0",
+    "-": "^0.0.1",
+    "add": "^2.0.6",
+    "axios": "0.19.2",
+    "bootstrap": "4.1.3",
+    "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "jquery": "3.2.1",
+    "papaparse": "5.3.1",
+    "popper.js": "^1.14.3",
+    "skrollr": "^0.6.26",
+    "vue": "^2.6.11",
+    "vue-cli-plugin-vuetify": "~2.0.5",
+    "vue-router": "3.5.1",
+    "vue-template-compiler": "^2.6.14",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint": "6.7.2",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.4.1"
   },
   "eslintConfig": {
     "root": true,

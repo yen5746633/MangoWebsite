@@ -1,17 +1,20 @@
 .DS_Store
-node_modules
-/dist
-
+node_modules/
+dist/
 
 # local env files
 .env.local
 .env.*.local
+.env
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
 
 # Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
 # Editor directories and files
 .idea
@@ -21,3 +24,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# 本專案使用 yarn, 所以先把 package-lock.json ignore
+package-lock.json
+.vscode/

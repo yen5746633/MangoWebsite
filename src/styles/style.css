@@ -1,0 +1,268 @@
+@charset "UTF-8";
+* {
+  font-family: 'Playfair Display', 'Noto Serif TC', '微軟正黑體';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: bold;
+}
+
+body {
+  background-color: black;
+}
+
+html {
+  background-color: #feffe1;
+}
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav.navbar {
+  transition: 0.5s;
+}
+
+nav.navbar.fixed-top.navbar-expand-sm.navbar-top {
+  background-color: rgba(153, 179, 153, 0.3);
+}
+nav.navbar.fixed-top.navbar-expand-sm.navbar-top a {
+  color: white;
+  transition: 0.5s;
+  font-size: 25px;
+}
+nav.navbar.fixed-top.navbar-expand-sm.navbar-top a:hover {
+  color: #ffec70;
+}
+header.jumbotron {
+  text-align: center;
+  background-image: url(../assets/images/mango_head.png);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  z-index: 4;
+}
+header.jumbotron .container {
+  color: #ffec70;
+  padding: 100px 0px;
+}
+
+section {
+  padding: 50px 0px;
+}
+section .valid {
+  border: 2px solid green;
+}
+section .invalid {
+  border: 2px solid red;
+}
+
+section#love,
+section#seed {
+  background-color: white;
+  overflow: hidden;
+}
+
+section#love .man_circle,
+section#seed .man_circle {
+  position: relative;
+}
+section#love .man_circle .cir,
+section#seed .man_circle .cir {
+  border-radius: 100%;
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  left: -50%;
+  top: -700px;
+  background-color: #ffec70;
+}
+section#seed .col-xl-7.img {
+  min-height: 300px;
+  height: auto;
+  max-width: 600px;
+  background-image: url(../assets/images/mango_seed.png);
+  background-position: center;
+  background-size: cover;
+  z-index: 10;
+}
+section#seed .col-xl-2 {
+  margin-top: 10%;
+  line-height: 1.5;
+}
+
+section#talk {
+  background-color: #fff8c7;
+  overflow: hidden;
+}
+
+section#talk .col-lg-12 {
+  line-height: 1.5;
+  text-align: center;
+}
+section#love .row,
+section#gold .row {
+  text-align: center;
+}
+section#love .col-xl-7,
+section#gold .col-xl-7 {
+  height: auto;
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+  z-index: 10;
+}
+section#love .col-xl-7.img {
+  background-image: url(../assets/images/mango_love.png);
+}
+section#gold .col-xl-7.img {
+  background-image: url(../assets/images/mango_gold.png);
+}
+section#love .addlovemango,
+section#gold .addgoldmango {
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+section#love .addlovemango:hover,
+section#gold .addgoldmango:hover {
+  background-color: #f2f2f2;
+}
+
+section#gold,
+section#know {
+  background-color: white;
+  overflow: hidden;
+}
+section#gold .kno_circle,
+section#know .kno_circle {
+  position: relative;
+}
+section#gold .kno_circle .cir,
+section#know .kno_circle .cir {
+  border-radius: 100%;
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  left: 90%;
+  top: 100px;
+  background-color: #ffec70;
+}
+section#know .col-xl-7.img {
+  height: auto;
+  min-height: 200px;
+  max-height: 300px;
+  max-width: 600px;
+  background-image: url(../assets/images/mango_green.png);
+  background-position: center;
+  z-index: 10;
+}
+section#know .col-xl-5 {
+  margin-top: 10%;
+  line-height: 1.5;
+  z-index: 10;
+}
+
+section#buy {
+  background-color: white;
+  height: auto;
+}
+
+section#page {
+  padding: 0px 0px;
+}
+
+section#car {
+  background-color: white;
+}
+section#car span {
+  color: red;
+}
+
+section#car .form-check {
+  margin: 10px 13px 0px 0px;
+  text-align: center;
+}
+section#car #custom_note {
+  height: 100px;
+}
+
+section#boto {
+  background-color: black;
+  color: white;
+}
+section#boto h2 {
+  margin-left: 40px;
+}
+
+.count .minus,
+.count .num,
+.count .add {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+}
+.count .minus,
+.count .add {
+  width: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.count .buy {
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.count .buy:hover {
+  background-color: #ddd;
+}
+
+section#buy .finanbuy {
+  font-size: 25px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+section#buy .finanbuy:hover {
+  background-color: #f2f2f2;
+}
+
+.error {
+  border-color: red !important;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+th {
+  background-color: green;
+  color: white;
+}

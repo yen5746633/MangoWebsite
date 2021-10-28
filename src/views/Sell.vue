@@ -216,7 +216,101 @@ export default {
   name: 'Sell',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      shoplist: [
+        {name: "愛文",price: 400},
+        {name: "金煌",price: 350 }
+      ],
+      total_price: 0,
+      datas: [
+        {name: "愛文",price: 400},
+        {name: "金煌",price: 350 }
+      ]
+    }
+  },
+  methods :{
+   addcar: function(e,a,b){
+     if (e>=0){
+     var love_buy = buy_html.replace("{{mango_name}}", vm.shoplist[e].name)
+                           .replace("{{mango_num}}",$(a).val())
+                           .replace("{{mango_price}}", ($(a).val())*(vm.shoplist[e].price))
+       $(b).html(love_buy)
+       console.log($(a).val())
+       ship_e = ((1*($('#selectgold').val())+1*($('#selectlove').val()))%2!=0)*100;
+       var total_buy = total_html.replace("{{total_price}}", 350*($('#selectgold').val())+400*($('#selectlove').val())+(ship_e))
+       $(".item_total").html(total_buy)
+     if(ship_e==0){
+        $(".item_ship").html(ship_html.replace("{{ship_exp}}",0)) }else{
+          $(".item_ship").html(ship_html.replace("{{ship_exp}}",100)) }
+     //  },
+     }
+   },
   }
+// //////input
+// var inputs = document.querySelectorAll('input.valid');
+
+// inputs.forEach( input =>{
+//   document.addEventListener('input', function() {
+//     if(input.checkValidity()){
+//       input.classList.add('valid');
+//       input.classList.remove('invalid');
+//     }else{
+//       input.classList.add('invalid');
+//       input.classList.remove('valid');
+//     }
+//     });
+// })
+
+// /////////////////填寫頁面
+// var appUrl = "https://script.google.com/macros/s/AKfycbw_7JFjg4z_4F0_N1Xn3zwflHH7EneYkLEAd8VgggM1fNQJL0MX/exec",
+//   sheetsUrl =  "https://docs.google.com/spreadsheets/d/1i9SzT0Qg4X7RA2Vsb6oBmLkxiCvncBgweR6zJjCTmPQ/edit#gid=0",
+//   sheetName = "工作表1";
+
+// var order_recipient_name = $("#recipient_name");
+// var order_address = $("#recipient_address");
+// var order_cellphone =  $("#recipient_phone");
+// var order_home_phone = $("#recipient_home_phone");
+// var order_mango_love = $("#selectlove");
+// var order_mango_gold = $("#selectgold");
+// var order_mango_total = (350*($('#selectgold').val())+400*($('#selectlove').val()));
+// var order_mango_pay = (350*($('#selectgold').val())+400*($('#selectlove').val())+ship_e);
+// var order_custom_name = $("#custom_name");
+// var order_custom_phone = $("#custom_phone");
+// var order_custom_note =$("#custom_note");
+// var order_custom_email =$("#custom_email");
+// var order_ship =$("#custom_ship");
+// var insertType= "bottom";
+
+// var sendBtn = $('#sendBtn');
+// var parameter = {};
+
+
+// var arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+// var Today=new Date();
+
+// var numm =(arr[Math.floor(Math.random()*26)]+String(Today.getFullYear()-1911)+String(Today.getMonth()+1)+String(Today.getDate())+String(Today.getHours())+String(Today.getMinutes())+String(Today.getSeconds())+String(Math.floor(Math.random()*1000)));
+
+// sendBtn.on('click', function() {
+//   if(($('#selectlove').val() | $('#selectgold').val()) == 0 ){
+//     alert("購物車不可為空!")
+//   }else if(document.forms[0].checkValidity() == 1 ){
+//     parameter = {
+//     url: sheetsUrl,
+//     name: sheetName,
+//     data: ([[order_recipient_name.val(),order_address.val(),order_cellphone.val(),order_home_phone.val(),order_mango_love.val(),order_mango_gold.val(),(1*(order_mango_love.val())+1*(order_mango_gold.val())),(350*($('#selectgold').val())+400*($('#selectlove').val())+ship_e),order_custom_name.val(),order_custom_email.val(),order_custom_phone.val(),order_custom_note.val(),numm]]).toString(),
+//     row: ([[order_recipient_name.val(),order_address.val(),order_cellphone.val(),order_home_phone.val(),order_mango_love.val(),order_mango_gold.val(),(1*(order_mango_love.val())+1*(order_mango_gold.val())),(350*($('#selectgold').val())+400*($('#selectlove').val())+ship_e),order_custom_name.val(),order_custom_email.val(),order_custom_phone.val(),order_custom_note.val(),numm]]).length,
+//     column: ([[order_recipient_name.val(),order_address.val(),order_cellphone.val(),order_home_phone.val(),order_mango_love.val(),order_mango_gold.val(),(1*(order_mango_love.val())+1*(order_mango_gold.val())),(350*($('#selectgold').val())+400*($('#selectlove').val())+ship_e),order_custom_name.val(),order_custom_email.val(),order_custom_phone.val(),order_custom_note.val(),numm]])[0].length,
+//     insertType: "bottom",
+//   };
+//   $.get(appUrl, parameter);
+//   alert("成功下訂!!"+numm+"正在前往結帳頁面...");
+//   }else{
+//       alert("必填欄位不可為空或是格式錯誤!");
+//     }
+// });
+
 }
 </script>
 

@@ -66,26 +66,7 @@ export default {
   name: 'Home',
   props: {
     msg: String
-  },
-  mounted() {
-    // var s = skrollr.init();
-    // $(window).scroll(function(evt){
-    //   if ($(window).scrollTop()>0) {
-    //     $(".navbar").removeClass("navbar-top");
-    //     $(".navbar").addClass("bg-light");
-    //     $(".navbar").addClass("navbar-light ");
-    //     $("h1").css("color","#ffec70");
-    //   }
-    //   else {
-    //       $("h1").css("color","#F4F0ED");
-    //       $(".navbar").addClass("navbar-top");
-    //       $(".navbar").removeClass("bg-light");
-    //       $(".navbar").removeClass("navbar-light ");
-    //   }
-    // });
-
-  },
-
+  }
 }
 </script>
 

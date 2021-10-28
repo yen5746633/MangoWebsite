@@ -18,20 +18,17 @@ h6,
   font-weight: bold;
 }
 
-body {
-  background-color: black;
-}
-
 html {
   background-color: #feffe1;
 }
 
 body {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#app {
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.3);
 }
-
 nav.navbar {
   transition: 0.5s;
 }

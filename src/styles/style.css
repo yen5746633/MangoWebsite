@@ -69,7 +69,8 @@ section .invalid {
 }
 
 section#love,
-section#seed {
+section#seed,
+section#manage {
   background-color: white;
   overflow: hidden;
 }

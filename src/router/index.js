@@ -14,9 +14,14 @@ const routes = [
     component: () => import('../views/Sell.vue'),
   },
   {
-    path: '/backstage',
+    path: '/backstagelogin/backstagelist',
     name: 'Backstage',
-    component: () => import('../views/Backstage.vue'),
+    component: () => import('../views/BackstageList.vue'),
+  },
+  {
+    path: '/backstagelogin',
+    name: 'BackstageLogin',
+    component: () => import('../views/BackstageLogin.vue'),
   }
 ];
 

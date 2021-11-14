@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-top">
+    <nav class="navbar fixed-top navbar-expand-sm bg-light navbar-light">
       <div class="container">
         <a class="navbar-brand" href="/">Mango Sweetie.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMango" aria-controls="navbarMango" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,21 +29,21 @@ export default {
   props: {
     msg: String
   },
-  mounted() {
-    $(window).scroll(function(evt){
-      if ($(window).scrollTop()>0) {
-        $(".navbar").removeClass("navbar-top");
-        $(".navbar").addClass("bg-light");
-        $(".navbar").addClass("navbar-light ");
-      }
-      else {
-          $(".navbar").addClass("navbar-top");
-          $(".navbar").removeClass("bg-light");
-          $(".navbar").removeClass("navbar-light ");
-      }
-    });
+  // mounted() {
+  //   $(window).scroll(function(evt){
+  //     if ($(window).scrollTop()>0) {
+  //       $(".navbar").removeClass("navbar-top");
+  //       $(".navbar").addClass("bg-light");
+  //       $(".navbar").addClass("navbar-light ");
+  //     }
+  //     else {
+  //         $(".navbar").addClass("navbar-top");
+  //         $(".navbar").removeClass("bg-light");
+  //         $(".navbar").removeClass("navbar-light ");
+  //     }
+  //   });
 
-    var s = skrollr.init();
-  }
+  //   var s = skrollr.init();
+  // }
 };
 </script>
